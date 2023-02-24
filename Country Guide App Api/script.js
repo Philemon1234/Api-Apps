@@ -42,9 +42,9 @@ searchBtn.addEventListener("click", () => {
             </div>
 
             <div class="data-wrapper">
-            <h4>Common Language:</h4>
-            <span>${Object.keys(data[0].languages).toString().split(",").join(", ")}
-            </span>
+                <h4>Common Language:</h4>
+                <span>${Object.keys(data[0].languages).toString().split(",").join(", ")}
+                </span>
         </div>
         `
     }).catch(() =>{
