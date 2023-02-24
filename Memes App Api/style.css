@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Julee&family=Lobster&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Shantell+Sans:ital,wght@0,300;1,300&family=Tilt+Prism&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* styling body */
+body{
+    height: 100vh;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.meme-card{
+    background: #bb001f;
+    width: 25%;
+    border-radius: .5rem;
+    padding: .5rem;
+    text-align: center;
+}
+
+.card-meme-img{
+    border-radius: .2rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+#meme-title{
+    margin: .5rem 0 2rem 0;
+    font-family: 'Tilt Prism', cursive;
+    color: #bdb7b7;
+}
+
+.meme-btn{
+    padding: .7rem 2rem;
+    font-size: 1.3rem;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: #fff;
+    border: 2px solid #fff;
+    color: #bb001f;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    outline: none;
+    margin: 1rem;
+}
+
+.meme-btn::before{
+    content: "";
+    background-color: #bb001f;
+    width: 0%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    transition: .2s all linear;
+    z-index: -1;
+}
+
+.meme-btn:active{
+    transform: scale(.98);
+}
+
+.meme-btn:hover::before{
+    width: 100%;
+}
+
+.meme-btn:hover{
+    color: #fff;
+}
