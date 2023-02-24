@@ -33,9 +33,9 @@ body{
     border-radius: .62em;
     box-shadow: 0 1.25em 1.8em rgba(8, 21, 65, .2);
     box-shadow: 7px 10px 176px 9px rgba(11,104,191,0.55);
--webkit-box-shadow: 7px 10px 176px 9px rgba(11,104,191,0.55);
--moz-box-shadow: 7px 10px 176px 9px rgba(11,104,191,0.55);
-z-index: -1;
+    -webkit-box-shadow: 7px 10px 176px 9px rgba(11,104,191,0.55);
+    -moz-box-shadow: 7px 10px 176px 9px rgba(11,104,191,0.55);
+    z-index: -1;
 }
 
 .search-wrapper{
