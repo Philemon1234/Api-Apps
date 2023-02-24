@@ -40,7 +40,9 @@ p{
     line-height: 1.5rem;
     font-size: 1.3rem;
     color: #fff;
+    width: 100%;
     font-family: 'Shantell Sans', cursive;
+    overflow: hidden;
 }
 
 /* styling get joke button */

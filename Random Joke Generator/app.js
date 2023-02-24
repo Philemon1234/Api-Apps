@@ -5,16 +5,19 @@ let result = document.getElementById("result")
 
 
 //listening button click event
-btn.addEventListener("click", function(){
+btn.addEventListener("click", getJoke);
 
-    // fetching api
-  fetch("https://v2.jokeapi.dev/joke/Any?type=single")
-  .then(response => response.json())
-  .then(data => {
 
-        // Adding api response to result container which is in html
-        result.innerHTML = `
-        <p class="joke" id="joke">${data.joke}</p>
-        `;
-  })
-})
+function getJoke() {
+        // alert("Hello World");
+        // // fetching api
+        fetch("https://v2.jokeapi.dev/joke/Any?type=single")
+        .then(response => response.json())
+        .then(data => {
+
+        //       // Adding api response to result container which is in html
+              result.innerHTML = `
+              <p class="joke" id="joke">${data.joke}</p>
+              `;
+        })
+}
