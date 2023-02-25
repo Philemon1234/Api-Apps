@@ -9,6 +9,7 @@ btn.addEventListener("click", getJoke);
 
 
 function getJoke() {
+      result.style.opacity = "0";
         // alert("Hello World");
         // // fetching api
         fetch("https://v2.jokeapi.dev/joke/Any?type=single")
@@ -19,5 +20,6 @@ function getJoke() {
               result.innerHTML = `
               <p class="joke" id="joke">${data.joke}</p>
               `;
+              result.style.opacity = "1";
         })
 }
