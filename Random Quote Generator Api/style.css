@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Julee&family=Labrada:ital,wght@0,300;1,300&family=Lobster&family=Pacifico&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Shantell+Sans:ital,wght@0,300;1,300&family=Tilt+Prism&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background: #851e04;
+}
+
+.wrapper{
+    width: 400px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+.container{
+    width: 100%;
+    background: #552e02;
+    padding: 50px 40px;
+    box-shadow: 0 20px 65px rgb(87, 11, 16);
+    position: relative;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.container::after{
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 120%;
+    background: #ffffff;
+    z-index: -1;
+    top: -10%;
+    left: 10%;
+}
+
+.container p{
+    color: #fdd8d8;
+    list-style: none;
+    line-height: 2;
+    font-size: 23px;
+    font-family: 'Labrada', serif;
+}
+
+.container h3{
+    font-size: 25px;
+    color: #fff;
+    margin: 20px 0 60px 0;
+    font-weight: 600;
+    text-transform: capitalize;font-family: 'Shantell Sans', cursive;
+}
+
+.container button {
+    background: #fff;
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: 2px solid white;
+}
+
+.container button::before{
+    content: "";
+    background-color: #f7520c;
+    height: 300%;
+    width: 230%;
+    position: absolute;
+    top: 0;
+    left: -15px;
+    border-radius: inherit;
+    transform: rotate(45deg);
+    transition: .5s ease;
+    z-index: -1;
+}
+
+.container button:hover{
+    border: 2px solid #b07800;
+    color: #f7520c;
+}
+
+.container button:hover::before{
+    width: 600%;
+}
+
+.ceator{
+    color: #fff;
+    text-transform: capitalize;font-family: 'Lobster', cursive;
+    font-size: 23px;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+
+.ceator a{
+    color: #fff;
+    font-family: 'Lobster', cursive;
+    margin-left: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+
