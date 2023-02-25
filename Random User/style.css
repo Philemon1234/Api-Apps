@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Julee&family=Labrada:ital,wght@0,300;1,300&family=Lobster&family=Pacifico&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Shantell+Sans:ital,wght@0,300;1,300&family=Tilt+Prism&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background: #851e04;
+}
+
+.wrapper{
+    width: 400px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+
+
+.ceator{
+    color: #fff;
+    text-transform: capitalize;font-family: 'Lobster', cursive;
+    font-size: 23px;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+
+.ceator a{
+    color: #fff;
+    font-family: 'Lobster', cursive;
+    margin-left: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+
