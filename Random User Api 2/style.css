@@ -5,11 +5,142 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    font-family: monospace;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #333;
+}
+
+.card{
+    position: relative;
+    width: 30%;
+    height: 25vh;
+    background: #333;
+    transition: .5s;
+}
+
+.card:hover{
+    height: 65vh;
+}
+
+.card .lines{
+    position: absolute;
+    inset: 0;
+    background: #000;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+.card .lines::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 90vh;
+    background: linear-gradient(transparent, #45f3ff, #45f3ff, #45f3ff, transparent);
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+    0%{
+        transform: translate(-50%, -50%) rotate(0);
+    }
+
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.card .lines::after{
+    content: "";
+    position: absolute;
+    inset: 3px;
+    border-radius: 1em;
+    background: #292929;
+}
+
+.card .imgBx{
+    position: absolute;
+    top: -23%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    background: #000;
+    transition: .5s!important;
+    z-index: 10;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.card:hover .imgBx{
+    width: 240px;
+    height: 240px;
+}
+
+.card .imgBx::before{
+    content: "";
+    width: 500px;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(transparent, #ff3c7b, #ff3c7b, #ff3c7b, transparent);
+    animation: animate2 6s linear infinite;
+}
+
+@keyframes animate2 {
+    0%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+
+    100%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+.card .imgBx::after{
+    content: "";
+    position: absolute;
+    background: #292929;
+    border-radius: 50%;
+    inset: 3px;
+}
+
+.card .imgBx img{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    object-fit: cover;
+    transition: .3s;
+    filter: grayscale(1);
+    border-radius: 50%;
+}
+
+.card .imgBx img:hover{
+    filter: grayscale(0);
+}
+
+.email{
+    font-size: 1.4em;
+    display: block;
+    text-align: center;
 }
 
 .ceator{
     color: #fff;
-    text-transform: capitalize;font-family: 'Lobster', cursive;
+    text-transform: capitalize;
+    font-family: 'Lobster', cursive;
     font-size: 23px;
     position: absolute;
     bottom: 15px;
@@ -22,8 +153,101 @@
     margin-left: 0.5rem;
 }
 
+.card .content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* overflow-y: scroll; */
+    overflow: hidden;
+}
 
+.card .content .details{
+    padding: 20px;
+    width: 100%;
+    transition: .5s;
+    transform: translateY(120px);
+}
 
+.card:hover .content .details{
+}
 
+.card .content .details h2{
+    color: #45f3ff;
+    font-weight: 600;
+    line-height: 1.2em;
+    text-align: center;
+    margin-bottom: .5em;
+}
 
+.info-container{
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    /* height: 40vh; */
+    padding: 1em;
+    backdrop-filter: blur(10px);
+    border-radius: .5em;
+     color: #fff;
+}
 
+.info{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1em;
+    /* background-color: #45f3ff; */
+    text-align: center;
+}
+
+.info .sub-info h4{
+    font-size: 1.3em;
+    color: #a37f7f;
+}
+
+.info .sub-info h5{
+    font-size: 1.4em;
+    color: #ff3c7b;
+}
+
+.loction{
+    text-align: center;
+    font-size: 1.3em;
+    margin: 1em 0 1.5em 0;
+}
+
+.contact{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3em;
+    padding: 0 2em;
+}
+
+.contact i{
+    color: #ff3c7b;
+}
+
+.btn{
+    display: block;
+    margin: 1.5em auto 0 auto;
+    padding: 1em 2em;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-radius: .5em;
+    outline: none;
+    border: 0;
+    background-color: #ff3c7b;
+    color: #fff;
+    font-weight: 600;
+    transition: .5s;
+    z-index: 20;
+    position: absolute;
+    bottom: 2em;
+    right: 3em;
+}
+
+.btn:hover{
+    background-color: #fff;
+    color: #ff3c7b;
+}
