@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Julee&family=Lobster&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Tilt+Prism&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title{
+    font-family: 'Tilt Prism', cursive;
+    color: #ffffff;
+    text-align: center;
+    margin-top: .5em;
+    font-size: 3em;
+    z-index: 500;
+}
+
+body{
+    background-color: #222;
+    font-family: sans-serif;
+}
+
+.container{
+    background-color: rgba(0, 0, 0, .3);
+    backdrop-filter: blur(5px);
+    width: 80vw;
+    max-width: 37.5em;
+    padding: 3em 2.5em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: .62em;
+    box-shadow: 0 1.25em 1.8em rgba(8, 21, 65, .2);
+    box-shadow: 7px 10px 176px 9px rgba(11,104,191,0.55);
+    -webkit-box-shadow: 7px 10px 176px 9px rgba(11,104,191,0.55);
+    -moz-box-shadow: 7px 10px 176px 9px rgba(11,104,191,0.55);
+    z-index: -1;
+}
+
+.search-wrapper{
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    gap: 1.25em;
+}
+
+.search-wrapper button{
+    font-size: 1em;
+    background-color: #3d64e6;
+    color: #ffffff;
+    padding: .8em 0;
+    border: none;
+    border-radius: 1.5em;
+    transition: .3s linear;
+    cursor: pointer;
+}
+
+.search-2{
+    display: none;
+}
+
+.search-wrapper button:hover{
+    background-color: #333;
+}
+
+.search-wrapper input{
+    font-size: 1em;
+    border: none;
+    border-bottom: 2px solid #3d64e6;
+    outline: none;
+    color: #222a43;
+    backdrop-filter: blur(5px);
+    background-color: transparent;
+    color: #fff;
+    padding: 0 1em;
+    border-radius: 5px;
+}
+
+#result{
+    margin-top: 1.25em;
+}
+
+.container .flag-img{
+    display: block;
+    width: 45%;
+    min-width: 7.5em;
+    margin: 1.8em auto 1.2em auto;
+}
+
+.container h2{
+    font-weight: 600;
+    color: #4a5c90;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.8em;
+}
+
+.data-wrapper{
+    margin-bottom: 1em;
+    letter-spacing: .3px;
+}
+
+.container h4{
+    display: inline;
+    font-weight: 500;
+    color: #fff;
+}
+
+.container span{
+    color: #94979f;
+}
+
+.container h3{
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #e16060;
+}
+
+@media (max-width: 530px) {
+    .search-wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    .search-wrapper button p{
+        display: none;
+    }
+
+    .search-2{
+        display: block;
+        border-radius: 50%;
+    }
+
+    .search-wrapper input{
+        padding: 1em;
+    }
+}
