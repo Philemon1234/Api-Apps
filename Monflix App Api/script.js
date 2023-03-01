@@ -6,14 +6,13 @@ const SEARCH_URL = "https://api.themoviedb.org/3/search/movie?api_key=c037e12da8
 const form = document.getElementById("form");
 const search = document.getElementById("search");
 const main = document.getElementById("main");
-displayMovies(data.results);
-console.log(data.results);
 
 //Get Movies
 getMovies(API_URL)
 async function getMovies(url) {
     const res = await fetch(url)
     const data = await res.json()
+displayMovies(data.results);
     console.log(data.results);
 }
 
@@ -24,7 +23,7 @@ function displayMovies(movies){
         const movieElement = document.createElement("div")
         movieElement.classList.add("movie")
         movieElement.innerHTML = `
-            <img src="${IMAGE_PATH} + ${poster_path}" alt="${title}"/>
+            <img src="${IMAGE_PATH + poster_path}" alt="${title}"/>
 
             <div class="movie-info">
                 <h3>${title}<h3>
@@ -57,6 +56,6 @@ form.addEventListener("submit", (e)=>{
         getMovies(SEARCH_URL+searchValue)
         searchValue = ''
     } else{
-        window.location.reload()
+        window.location.reload();
     }
 })
