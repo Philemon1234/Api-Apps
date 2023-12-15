@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #111;
+	font-family: sans-serif;
+	height: 100vh;
+	padding: 2rem 0;
+	overflow-x: hidden;
+}
+
+h1{
+	font-family: 'Lobster', cursive;
+	text-align: center;
+	margin-bottom: 1rem;
+	color: #ffffff;
+}
+
+.results {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+}
+
+.result {
+	height: 100%;
+	width: 90%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+}
+
+.result img {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .4);
+}
+
+.buttons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+button {
+	background-color: darksalmon;
+	position: fixed;
+	left: 20px;
+	bottom: 10px;
+	border: 0;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 18px;
+	padding: 10px;
+	margin: 10px;
+	width: 300px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:active {
+	background-color: rgb(220, 71, 21);
+	transform: scale(0.98);
+}
+
+button:focus {
+	outline: none
+}
+
+.disabled{
+	display: none;
+}
+
+
+
+
+@media (max-width: 400px) {
+	.result {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 250px) {
+	.result {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}

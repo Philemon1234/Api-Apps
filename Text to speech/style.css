@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* @keyframes animate {
+    0% {
+        border-radius: 80% 20% 79% 21% / 24% 50% 50% 76%;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        border-radius: 60% 40% 57% 43% / 42% 40% 60% 58%;
+        transform: rotate(180deg);
+    }
+} */
+
+.logo h3 {
+    margin: 3rem 4rem;
+    font-size: 2.5rem;
+    color: #7c1702;
+    font-family: sans-serif;
+    user-select: none;
+}
+
+form {
+    position: relative;
+    width: 50%;
+    margin: 7rem auto 0 15rem;
+    height: 50vh;
+}
+
+#voiceSelect {
+    position: absolute;
+    top: -9%;
+    left: 0%;
+    width: 85%;
+    z-index: 5;
+    padding: .5rem;
+    border: 2px solid purple;
+    border-radius: 5rem;
+    outline: none;
+}
+
+option {
+    background-color: purple;
+    color: #fff;
+    font-size: 1rem;
+}
+
+/* .shape1::before {
+    content: "";
+    display: block;
+    height: 20rem;
+    width: 20rem;
+    background-color: rgb(15, 216, 247);
+    position: absolute;
+    top: 25%;
+    left: 17%;
+    border-radius: 65% 35% 55% 45% / 35% 58% 42% 65%;
+    animation: animate 5s linear infinite alternate-reverse;
+    opacity: .6;
+}
+
+.shape1::after {
+    content: "";
+    display: block;
+    height: 20rem;
+    width: 20rem;
+    background-color: rgb(109, 19, 179);
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    border-radius: 65% 35% 55% 45% / 35% 58% 42% 65%;
+    animation: animate 5s linear infinite alternate-reverse;
+    opacity: .6;
+} */
+
+textarea {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 5px solid purple;
+    border-radius: .5rem;
+    outline: none;
+    font-size: 1.5rem;
+    background-color: transparent;
+    backdrop-filter: blur(100px);
+}
+
+.btns {
+    position: absolute;
+    bottom: -15%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.play-btn,
+button {
+    cursor: pointer;
+}
+
+button {
+    background-color: #7c1702;
+    padding: .5rem 2.5rem;
+    font-size: 1.5rem;
+    color: white;
+    border: 0;
+    border-radius: 5rem;
+    transition: .5s all;
+}
+
+button:hover {
+    background-color: #471005;
+}
+
+button:active {
+    transform: scale(.98);
+}
+
+.control-btns {
+    display: flex;
+}
+
+.play-btn,
+.pause-btn,
+.stop-btn {
+    font-size: 1.8rem;
+    color: rgb(0, 120, 20);
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+
+.pause-btn {
+    position: absolute;
+    top: 18%;
+    right: 3.7%;
+    display: none;
+}
+
+.pause-btn.show {
+    display: block;
+}
+
+.clear-btn {
+    position: absolute;
+    top: -9%;
+    right: 0%;
+    background-color: purple;
+    font-size: 1.2rem !important;
+    padding: .5rem 2rem;
+    border-radius: 0;
+    border-bottom-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+}

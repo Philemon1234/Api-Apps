@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #040117;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+
+header {
+    position: relative;
+}
+
+.nav_bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo .img {
+    width: 8rem;
+}
+
+.logo .img img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.logo h3 {
+    margin-top: 1rem;
+    font-size: 3rem;
+    color: #FFB526;
+    font-family: 'Times New Roman', Times, serif;
+    user-select: none;
+}
+
+.search {
+    position: relative;
+    width: 40rem;
+}
+
+.search input {
+    padding: 1rem;
+    font-size: 2rem;
+    outline: none;
+    border: 2px solid #FFB526;
+    border-radius: 5rem;
+    background-color: transparent;
+    color: #fff;
+    width: 100%;
+    /* background-color: red; */
+}
+
+.search_btn {
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    background-color: transparent;
+    border: 2px solid #FFB526;
+    border-bottom-right-radius: 5rem;
+    border-top-right-radius: 5rem;
+    color: #fff;
+    cursor: pointer;
+    transition: .5s;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #040117;
+}
+
+.search_btn:hover {
+    color: #FFB526;
+    background-color: #0a023d;
+}
+
+/* Main */
+main {
+    padding-bottom: 5rem;
+}
+.container {
+    color: #fff;
+    /* background-color: #FFB526; */
+    width: 80%;
+    margin: 5rem auto;
+}
+
+.food_title {
+    font-size: 4rem;
+    margin-bottom: 5rem;
+    text-transform: capitalize;
+}
+
+
+.wrapper {
+    margin-left: 10rem;
+}
+
+.food_image {
+    width: 60%;
+    height: 40rem;
+    margin-bottom: 3rem;
+}
+
+.food_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text_container span {
+    color: #FFB526;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.text_container small,
+.text_container small a {
+    color: #fff;
+    margin-left: 1rem;
+}
+
+.more_link {
+    color: #FFB526;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+.error_message {
+    background-color: rgba(255, 0, 0);
+    color: white;
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 3rem;
+    transition: .5s;
+}
+
+.error_message.active {
+    top: 0;
+}
+
+.close_error {
+    display: block;
+    font-size: 2rem;
+    padding: .5rem 2rem;
+    background-color: transparent;
+    border: 2px solid #FFB526;
+    color: #fff;
+    border-radius: 5rem;
+    margin: 2.5rem auto 0 auto;
+    z-index: 2;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.close_error:hover {
+    background-color: #0a023d;
+}
+
+
+@media (max-width: 991px) {
+    .nav_bar {
+        flex-direction: column;
+    }
+
+    .search {
+        margin-top: 3rem;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .wrapper {
+        margin-left: 2rem;
+    }
+
+    .food_image {
+        width: 80%;
+        margin: 3rem auto;
+    }
+}
+
+
+@media (max-width: 436px) {
+    .food_image {
+        width: 95%;
+    }
+
+    .search {
+        position: relative;
+        width: 27rem;
+    }
+
+    .nav_bar {
+        padding: .5rem 3rem;
+    }
+
+    .logo .img {
+        width: 5rem;
+    }
+    
+    .logo h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+}
