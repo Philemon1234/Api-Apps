@@ -7,9 +7,6 @@ let errorText = document.querySelector(".error_text");
 
 // getFood();
 
-
-
-
 searchForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
